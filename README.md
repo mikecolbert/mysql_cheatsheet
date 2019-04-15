@@ -43,5 +43,6 @@ GRANT ALL PRIVILEGES ON database_name.* TO 'database_name_mgr'@'%';
 
 
 FLUSH PRIVILEGES;
+# force MySQL to reload users and permissions after changes have been made
 
 ```
