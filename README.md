@@ -16,6 +16,7 @@ DROP DATABASE new_database_name;
 ```
 
 
+
 Users and Privileges:
 ```
 CREATE USER 'database_name_mgr'@'%' IDENTIFIED BY 'new_password';
@@ -49,5 +50,28 @@ DROP USER 'user_to_drop'@'host'
 
 FLUSH PRIVILEGES;
 # force MySQL to reload users and permissions after changes have been made
+
+```
+
+
+
+Tables:
+```
+SHOW TABLES;
+
+DESCRIBE table_name;
+
+CREATE TABLE new_tablename IF NOT EXISTS (
+id int UNIQUE NOT NULL PRIMARY KEY,  
+field1 varchar(128) NOT NULL, 
+field2 varchar(256), 
+field3 int(11) NOT NULL, 
+field4 int(11)
+);
+
+DROP TABLE table_name;
+
+
+
 
 ```
