@@ -19,8 +19,10 @@ DROP DATABASE new_database_name;
 Users and Privileges:
 ```
 CREATE USER 'database_name_mgr'@'%' IDENTIFIED BY 'new_password';
+
 # '%' indicates the user can log in from anywhere. If you want to limit logins to localhost, replace '%' with 'localhost'. 
 # I think you could also add an IP address or IP network id or range.*
+
 
 GRANT ALL PRIVILEGES ON database_name.* TO 'database_name_mgr'@'%';
 
@@ -38,6 +40,7 @@ GRANT ALL PRIVILEGES ON database_name.* TO 'database_name_mgr'@'%';
 # UPDATE - allows the user to update table rows
 
 # (example) GRANT SELECT, INSERT ON database_name.table1 TO '*new_database_name_usr'@'%';
+
 
 FLUSH PRIVILEGES;
 
