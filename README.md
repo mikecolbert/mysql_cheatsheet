@@ -62,12 +62,12 @@ SHOW TABLES;
 DESCRIBE table_name;
 
 CREATE TABLE new_tablename IF NOT EXISTS (
-id int UNIQUE NOT NULL PRIMARY KEY,  
+id int UNIQUE AUTO_INCREMENT NOT NULL PRIMARY KEY,  
 field1 varchar(128) NOT NULL, 
 field2 varchar(256), 
 field3 int(11) NOT NULL, 
 field4 int(11)
-);
+)AUTO_INCREMENT=1;
 
 DROP TABLE table_name;
 
