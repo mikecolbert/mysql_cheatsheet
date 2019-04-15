@@ -42,6 +42,11 @@ GRANT ALL PRIVILEGES ON database_name.* TO 'database_name_mgr'@'%';
 # (example) GRANT SELECT, INSERT ON database_name.table1 TO '*new_database_name_usr'@'%';
 
 
+DROP USER 'user_to_drop'@'host'
+
+# host could be %, localhost, or some IP address/range.
+
+
 FLUSH PRIVILEGES;
 # force MySQL to reload users and permissions after changes have been made
 
